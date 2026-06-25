@@ -1,0 +1,88 @@
+body {
+  background-color: black;
+  margin-top: 100px;
+}
+ @font-face { font-family: 'OldNewspaper'; src: url('../fonts/Oldnewspapertypes-449D.ttf') format('truetype'); }
+header {
+  text-align: center; /* centra los divs inline-block */
+}
+
+header {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  gap: 20px;               /* espacio entre los cuadros */
+}
+
+.calendario a, .grupos a, .mapa a {
+  color: white;
+  text-decoration: none;
+  font-family: 'OldNewspaper';
+  font-size: 18px;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 15px;
+  display: inline-block;
+  background-color: black;
+}
+
+.calendario a:hover, .grupos a:hover, .mapa a:hover {
+  background-color:  rgb(27, 96, 31);
+}
+
+.enc h1 {
+  color: white;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 30px;
+   position: absolute;
+  top: 50%;          /* mitad de la pantalla */
+  left: 0;           /* pegado a la izquierda */
+  transform: translateY(-50%); /* ajusta al centro exacto */
+   font-family: 'OldNewspaper'; font-size: 30px;
+
+}
+
+.logo {
+  display: inline-block;
+  width: 200px;
+  margin: 20px auto; /* centra el div con la imagen */
+  margin-right: 50%;
+}
+.cox {
+  display: inline-block;
+  color: white;
+  position: absolute;
+  top: 50%;          /* mitad de la pantalla */
+  right: 35;           /* pegado a la derecha */
+  transform: translateY(-50%); /* ajusta al centro exacto */
+   font-family: 'OldNewspaper'; font-size: 30px;
+
+}
+.cox input {
+  width: 300px;          /* ancho más grande */
+  height: 40px;          /* alto más grande */
+  font-size: 24px;       /* texto más grande */
+  font-family: 'OldNewspaper'; /* tu fuente favorita */
+  padding: 8px;          /* espacio interno */
+  margin: 10px 0;        /* separación entre campos */
+  border: 2px solid white; /* borde visible */
+  border-radius: 8px;    /* esquinas redondeadas */
+  background-color: black; /* fondo oscuro */
+  color: white;          /* texto blanco */
+}
+
+.cox button {
+  font-family: 'OldNewspaper'; font-size: 30px;
+  margin-top: 25px ;
+  margin-right: 50px;
+  border-radius: 15px 15px 15px 15px;
+  display: block;
+  position: absolute;
+  left: 50%;                  /* lo coloca en la mitad horizontal */
+  transform: translateX(-50%);
+  background-color: rgb(222, 215, 206);
+}
+footer {
+    color: darkslategrey;
+    text-align: right;
+}
