@@ -1,88 +1,113 @@
 body {
   background-color: black;
-  margin-top: 100px;
-}
- @font-face { font-family: 'OldNewspaper'; src: url('../fonts/Oldnewspapertypes-449D.ttf') format('truetype'); }
-header {
-  text-align: center; /* centra los divs inline-block */
+  margin: 0;
+  font-family: 'OldNewspaper', sans-serif;
 }
 
+@font-face {
+  font-family: 'OldNewspaper';
+  src: url('../fonts/Oldnewspapertypes-449D.ttf') format('truetype');
+}
+
+/* Navegación */
 header {
   display: flex;
-  justify-content: center; /* centra horizontalmente */
-  gap: 20px;               /* espacio entre los cuadros */
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
-.calendario a, .grupos a, .mapa a {
+header a {
   color: white;
   text-decoration: none;
-  font-family: 'OldNewspaper';
   font-size: 18px;
-  padding: 20px;
+  padding: 15px 20px;
   border: 2px solid white;
   border-radius: 15px;
-  display: inline-block;
   background-color: black;
 }
 
-.calendario a:hover, .grupos a:hover, .mapa a:hover {
-  background-color:  rgb(27, 96, 31);
+header a:hover {
+  background-color: rgb(27, 96, 31);
 }
 
+/* Imagen central */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Nombre / título */
 .enc h1 {
   color: white;
-  margin-top: 10px;
-  display: inline-block;
-  padding: 30px;
-   position: absolute;
-  top: 50%;          /* mitad de la pantalla */
-  left: 0;           /* pegado a la izquierda */
-  transform: translateY(-50%); /* ajusta al centro exacto */
-   font-family: 'OldNewspaper'; font-size: 30px;
-
+  font-size: 30px;
+  margin: 0;
+  font-family: 'OldNewspaper';
+  position: absolute;   /* se mantiene en PC */
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }
 
-.logo {
-  display: inline-block;
-  width: 200px;
-  margin: 20px auto; /* centra el div con la imagen */
-  margin-right: 50%;
-}
+/* Bloque usuario */
 .cox {
-  display: inline-block;
   color: white;
-  position: absolute;
-  top: 50%;          /* mitad de la pantalla */
-  right: 35;           /* pegado a la derecha */
-  transform: translateY(-50%); /* ajusta al centro exacto */
-   font-family: 'OldNewspaper'; font-size: 30px;
-
+  font-family: 'OldNewspaper';
+  position: absolute;   /* se mantiene en PC */
+  top: 50%;
+  right: 35px;
+  transform: translateY(-50%);
 }
+
 .cox input {
-  width: 300px;          /* ancho más grande */
-  height: 40px;          /* alto más grande */
-  font-size: 24px;       /* texto más grande */
-  font-family: 'OldNewspaper'; /* tu fuente favorita */
-  padding: 8px;          /* espacio interno */
-  margin: 10px 0;        /* separación entre campos */
-  border: 2px solid white; /* borde visible */
-  border-radius: 8px;    /* esquinas redondeadas */
-  background-color: black; /* fondo oscuro */
-  color: white;          /* texto blanco */
+  width: 300px;
+  height: 40px;
+  font-size: 24px;
+  padding: 8px;
+  margin: 10px 0;
+  border: 2px solid white;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
 }
 
 .cox button {
-  font-family: 'OldNewspaper'; font-size: 30px;
-  margin-top: 25px ;
-  margin-right: 50px;
-  border-radius: 15px 15px 15px 15px;
-  display: block;
-  position: absolute;
-  left: 50%;                  /* lo coloca en la mitad horizontal */
-  transform: translateX(-50%);
+  font-size: 20px;
+  margin-top: 15px;
+  border-radius: 15px;
   background-color: rgb(222, 215, 206);
+  cursor: pointer;
 }
+
+/* Footer */
 footer {
-    color: darkslategrey;
-    text-align: right;
+  color: darkslategrey;
+  text-align: right;
+  padding: 10px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .enc h1,
+  .cox {
+    position: static;   /* quita absolute en móvil */
+    transform: none;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .cox input {
+    width: 90%;
+    max-width: 300px;
+    font-size: 16px;
+  }
+
+  .cox button {
+    display: block;
+    margin: 15px auto;
+    font-size: 16px;
+    padding: 8px 16px;
+  }
 }
