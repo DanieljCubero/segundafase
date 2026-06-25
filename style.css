@@ -8,6 +8,47 @@ body {
   font-family: 'OldNewspaper';
   src: url('../fonts/Oldnewspapertypes-449D.ttf') format('truetype');
 }
+/* Header general (PC) */
+header {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* permite que los botones se acomoden si no hay espacio */
+  padding: 20px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-family: 'OldNewspaper';
+  font-size: 18px;
+  padding: 15px 20px;
+  border: 2px solid white;
+  border-radius: 15px;
+  background-color: black;
+  display: inline-block;
+}
+
+header a:hover {
+  background-color: rgb(27, 96, 31);
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;   /* botones en columna */
+    align-items: center;      /* centrados */
+    gap: 10px;                /* menos espacio entre ellos */
+  }
+
+  header a {
+    width: 80%;               /* cada botón ocupa casi todo el ancho */
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+
 
 /* Navegación */
 header {
