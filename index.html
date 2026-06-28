@@ -34,7 +34,7 @@
 <img src="img/logo1.png" alt="logo2026">
 </div>
 <div class="cox">
-<form name="index-form" method="POST" data-netlify="true" action="/second-face.html">
+<form name="index-form" method="POST" data-netlify="true">
   <input type="hidden" name="form-name" value="index-form">
 
   <label for="nombre">Nombre:</label>
@@ -45,6 +45,24 @@
 
   <button type="submit">Iniciar</button>
 </form>
+
+<script>
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault(); // evita que el navegador haga la redirección por defecto
+
+  // guarda el formulario en Netlify
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(new FormData(this)).toString()
+  })
+  .then(() => {
+    // redirige manualmente al archivo
+    window.location.href = "/second-face.html";
+  })
+  .catch((error) => alert(error));
+});
+</script>
 
 </div>
 <footer>
