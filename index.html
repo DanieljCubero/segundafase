@@ -34,13 +34,19 @@
 <img src="img/logo1.png" alt="logo2026">
 </div>
 <div class="cox">
-    <form name="index-form" method="POST" data-netlify="true" action="/second-face.html">
-     <label for="name">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required> <br>
-       <label for="last-name">Apellido:</label>
-        <input type="text" id="last-nombre" name="apellido" required> <br>
-        <button type="submit">Iniciar</button>
-        </form>
+<form name="index-form" method="POST" data-netlify="true" action="/second-face.html">
+  <!-- Campo oculto obligatorio -->
+  <input type="hidden" name="form-name" value="index-form">
+
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required> <br>
+
+  <label for="apellido">Apellido:</label>
+  <input type="text" id="apellido" name="apellido" required> <br>
+
+  <button type="submit">Iniciar</button>
+</form>
+
 
 </div>
 <footer>
