@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gracias</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #0b3d0b, #1a1a1a);
+      color: white;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+    }
+    h1 {
+      margin-top: 60px;
+      font-size: 40px;
+      color: gold;
+      text-shadow: 2px 2px 5px black;
+      animation: aparecer 2s ease-in-out;
+    }
+    p {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #f0f0f0;
+    }
+    .balon {
+      margin-top: 40px;
+      width: 100px;
+      height: 100px;
+      background: url("img/ball.png") no-repeat center;
+      background-size: contain;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @keyframes aparecer {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <h1>¡Resultados enviados correctamente!</h1>
+  <p>Gracias por participar en la encuesta del Mundial 2026.<br>
+     ¡Tu predicción ya está guardada!</p>
+  <div class="balon"></div>
+</body>
+</html>
